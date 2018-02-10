@@ -378,3 +378,5 @@ def create_scaffold(project_path):
         (os.path.join(project_path, "tests", "debugtalk.py"), "file")
     ]
     [create_path(p[0], p[1]) for p in path_list]
+if __name__ == '__main__':
+    print(get_sign('ds','fdsa2=','ios','1.0.0'))
