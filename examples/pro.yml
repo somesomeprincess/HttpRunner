@@ -1,0 +1,16 @@
+- test:
+    name: connect
+    request:
+        url: http://127.0.0.1:5000/osc/commands/execute
+        method: POST
+        headers:
+            user_agent: Apache-HttpClient/4.4
+
+        json:
+            name: camera._connect
+        extract:
+            - fp: content.fingerprint
+        validate:
+            - {"check":"status_code","comparator":"eq","expect":200}
+
+
